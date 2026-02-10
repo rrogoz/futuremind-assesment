@@ -312,6 +312,9 @@ Surrogate keys are generated as **MD5 hashes** of business key columns via `crea
 futuremind-assesment/
 |-- .env                              # OMDB API key
 |-- README.md
+|-- dashboard/
+|   |-- screenshots                   # imgs of dashboard
+|   |-- dashboard.py                  # scirpt to show dashboard
 |-- source/
 |   `-- revenues_per_day/
 |       `-- revenues_per_day.csv      # External source file
