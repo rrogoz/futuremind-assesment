@@ -1,0 +1,18 @@
+{
+    "pipeline_id": "OMDB-Bronze",
+    "source": {
+        "type": "api"
+    },
+    "validation_path": "data\\01_bronze\\revenues",
+    "target": {
+        "database": "bronze",
+        "table": "omdb",
+        "format": "parquet",
+        "name": "omdb",
+        "path": "data\\01_bronze",
+        "mode": "append",
+        "partition_by": [
+            "_tf_ingestion_time"
+        ]
+    }
+}

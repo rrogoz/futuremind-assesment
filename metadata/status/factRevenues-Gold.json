@@ -1,0 +1,12 @@
+{
+  "pipeline_id": "factRevenues-Gold",
+  "created_at": "2026-02-10T13:07:24.090925",
+  "created_at_unix": 1770725244,
+  "last_run_status": "success",
+  "last_run_timestamp": "2026-02-10T15:56:28.534338",
+  "last_run_timestamp_unix": 1770735388,
+  "last_run_date": "2026-02-10",
+  "last_success_timestamp": "2026-02-10T15:56:28.534338",
+  "last_success_timestamp_unix": 1770735388,
+  "last_success_date": "2026-02-10"
+}

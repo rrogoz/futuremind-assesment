@@ -1,0 +1,19 @@
+{
+    "pipeline_id": "OMDB-Silver",
+    "dependency": "OMDB-Bronze",
+    "source": {
+        "type": "parquet",
+        "path": "data\\01_bronze\\omdb",
+        "encoding": "utf-8"
+    },
+    "target": {
+        "pk": [
+            "title"
+        ],
+        "order_pk": "_tf_ingestion_time",
+        "format": "parquet",
+        "name": "omdb",
+        "path": "data\\02_silver\\omdb",
+        "mode": "merge"
+    }
+}

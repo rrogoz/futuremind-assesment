@@ -1,0 +1,47 @@
+{
+    "pipeline_id": "Revenues-Bronze",
+    "source": {
+        "type": "csv",
+        "path": "source\\revenues_per_day\\revenues_per_day.csv",
+        "delimiter": ",",
+        "header": true,
+        "encoding": "utf-8",
+        "schema": [
+            {
+                "name": "id",
+                "type": "string"
+            },
+            {
+                "name": "date",
+                "type": "string"
+            },
+            {
+                "name": "title",
+                "type": "string"
+            },
+            {
+                "name": "revenue",
+                "type": "integer"
+            },
+            {
+                "name": "theaters",
+                "type": "integer"
+            },
+            {
+                "name": "distributor",
+                "type": "string"
+            }
+        ]
+    },
+    "target": {
+        "database": "bronze",
+        "table": "revenues",
+        "format": "parquet",
+        "name": "revenues",
+        "path": "data\\01_bronze",
+        "mode": "append",
+        "partition_by": [
+            "_tf_ingestion_time"
+        ]
+    }
+}

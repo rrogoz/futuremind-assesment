@@ -1,0 +1,23 @@
+{
+    "pipeline_id": "Revenues-Silver",
+    "dependency": "Revenues-Bronze",
+    "source": {
+        "type": "parquet",
+        "path": "data\\01_bronze\\revenues",
+        "encoding": "utf-8"
+    },
+    "target": {
+        "pk": [
+            "date",
+            "title"
+        ],
+        "order_pk": "_tf_ingestion_time",
+        "format": "parquet",
+        "name": "revenues",
+        "path": "data\\02_silver\\revenues",
+        "mode": "merge",
+        "partition_by": [
+            "date"
+        ]
+    }
+}
