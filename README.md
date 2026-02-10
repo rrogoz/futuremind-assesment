@@ -153,7 +153,7 @@ OMDB-Bronze additionally compares existing titles in bronze with revenue titles 
 | `OMDB-Silver`     | `01_bronze/omdb`     | `title`           | `data/02_silver/omdb/`      |
 
 **How it works:**
-1. Read `last_success_timestamp_unix` from `metadata/status/{dependency}.json`
+1. Read `last_success_timestamp_unix` from `metadata/status/{pipeline}.json`
 2. Load only Bronze records where `_tf_ingestion_time > last_success_unix` (delta)
 3. Deduplicate by primary keys, keeping the record with the **highest** `_tf_ingestion_time`
 4. Merge into Silver: concat with existing, sort by `_tf_ingestion_time`, keep last per PK
