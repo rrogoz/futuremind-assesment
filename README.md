@@ -375,19 +375,6 @@ futuremind-assesment/
 
 ---
 
-## KPIs for Box Office Performance
-
-Based on the data model, the following KPIs can be computed:
-
-| KPI                     | Formula / Description                                                       |
-| ----------------------- | --------------------------------------------------------------------------- |
-| **Gross Revenue**       | `SUM(revenue)` - total ticket sales (daily, weekend, lifetime)              |
-| **Opening Weekend**     | First 3 days of revenue - predicts long-term success                        |
-| **Per-Theater Average** | `revenue / theaters` - measures demand strength                             |
-| **Multiplier**          | `total_gross / opening_weekend` - >3x indicates strong word-of-mouth        |
-| **Budget ROI**          | Revenue vs. production + marketing costs (requires `box_office` from OMDB)  |
-
----
 
 ## Final Comments / Known Limitations
 
