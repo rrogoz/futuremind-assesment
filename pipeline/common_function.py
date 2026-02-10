@@ -117,7 +117,7 @@ def updatePipelineStatus(pipeline_id: str, status: str = 'success'):
         status: Execution status ('success', 'failed', etc.)
     """
     # Prepare metadata path
-    metadata_dir = Path("../metadata/status")
+    metadata_dir = Path("../metadata/status/")
     metadata_dir.mkdir(parents=True, exist_ok=True)
     metadata_file = metadata_dir / f"{pipeline_id}.json"
     
